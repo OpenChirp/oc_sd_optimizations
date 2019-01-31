@@ -1,0 +1,2 @@
+#Ensure logrotate is run every 5 mins.
+*/5 * * * * root /etc/cron.daily/logrotate >> /dev/null

@@ -1,0 +1,41 @@
+/var/log/mail.info
+/var/log/mail.warn
+/var/log/mail.err
+/var/log/mail.log
+/var/log/kern.log
+/var/log/auth.log
+/var/log/user.log
+/var/log/lpr.log
+/var/log/cron.log
+/var/log/debug
+/var/log/messages
+{
+	size 100k
+	rotate 0
+	missingok
+	notifempty
+	copytruncate
+        compress
+        delaycompress
+	sharedscripts
+	postrotate
+		invoke-rc.d rsyslog rotate > /dev/null
+	endscript
+}
+
+
+/var/log/syslog
+/var/log/daemon.log
+{
+	size 10M
+	rotate 0
+        missingok
+        notifempty
+	copytruncate
+	compress
+	delaycompress
+        sharedscripts
+        postrotate
+		invoke-rc.d rsyslog rotate > /dev/null
+        endscript
+}
