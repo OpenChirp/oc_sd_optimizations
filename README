@@ -2,6 +2,10 @@
 
 * More strict log file size limitations to be able to fit in RAM
 * Log Rotation every 5 minutes
+* Systemd Journaling logging is done in RAM
+* Removes old logs from the unmounted subdirectory
+* /var/logs files are volatile
+* Creates tmpfiles logs on boot to avoid problems with /var/log/ in RAM
 
 ## Install Procedure
 
