@@ -9,7 +9,7 @@
 
 ## Install Procedure
 
-```
+```bash
 curl -s https://api.github.com/repos/OpenChirp/oc_sd_optimizations/releases/latest \
 | grep "browser_download_url.*deb" \
 | cut -d : -f 2,3 \
@@ -22,7 +22,7 @@ rm oc-sd-optimizations_*.deb
 
 
 ## Removing 
-```
+```bash
 dpkg --purge oc-sd-optimizations
 ```
 
