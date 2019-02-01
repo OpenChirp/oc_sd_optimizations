@@ -1,5 +1,8 @@
 # oc_sd_optimizations
 
+* More strict log file size limitations to be able to fit in RAM
+* Log Rotation every 5 minutes
+
 ## Install Procedure
 
 ```
@@ -18,3 +21,4 @@ rm oc-sd-optimizations_*.deb
 ```
 dpkg --purge oc-sd-optimizations
 ```
+
