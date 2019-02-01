@@ -1,5 +1,5 @@
 NAME=oc-sd-optimizations
-VERSION=0.01
+VERSION=0.02
 MAINTAINER='Artur Balanuta'
 DEPS := rsyslog
 WORK_DIR=src
@@ -20,6 +20,8 @@ COMMON_FPM_ARGS=\
 	--description $(DESCRIPTION) \
 	--config-files /etc/cron.d/00-oc-logrotate \
 	--config-files /etc/logrotate.d/rsyslog \
+	--config-files /etc/systemd/journald.conf.d/00-oc-journal.conf \
+	--config-files /etc/tmpfiles.d/oc-logs.conf \
 	--after-install $(POSTINSTALL_SCRIPT) \
 	--before-install $(PREINSTALL_SCRIPT) \
 	--after-remove $(POSTUNINSTALL_SCRIPT) \
