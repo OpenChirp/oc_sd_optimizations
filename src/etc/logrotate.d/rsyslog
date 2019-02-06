@@ -8,13 +8,15 @@
 /var/log/cron.log
 /var/log/debug
 {
+	su root adm
+	create 0666 root adm
         size 100k
         rotate 2
         missingok
         notifempty
         copytruncate
         compress
-        delaycompress
+	delaycompress
         sharedscripts
         postrotate
                 invoke-rc.d rsyslog rotate > /dev/null
@@ -27,13 +29,16 @@
 /var/log/messages
 /var/log/user.log
 {
-        size 5M
+	su root adm
+	create 0666 root adm
+        size 10M
         rotate 0
+	compress
+	delaycompress
+	copytruncate
         missingok
         notifempty
-        copytruncate
         compress
-        delaycompress
         sharedscripts
         postrotate
                 invoke-rc.d rsyslog rotate > /dev/null

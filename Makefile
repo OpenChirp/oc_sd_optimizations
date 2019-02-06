@@ -1,5 +1,5 @@
 NAME=oc-sd-optimizations
-VERSION=0.02
+VERSION=0.03
 MAINTAINER='Artur Balanuta'
 DEPS := rsyslog
 WORK_DIR=src
