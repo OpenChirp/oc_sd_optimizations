@@ -16,6 +16,7 @@ curl -s https://api.github.com/repos/OpenChirp/oc_sd_optimizations/releases/late
 | tr -d \" \
 | wget -i -
 
+sudo dpkg --purge oc-sd-optimizations | true
 sudo dpkg -i oc-sd-optimizations*.deb
 rm oc-sd-optimizations_*.deb
 

@@ -1,3 +1,6 @@
+
+echo "Post-Install"
+
 systemctl restart systemd-journald.service
 rm -rf /var/log/journal/
 

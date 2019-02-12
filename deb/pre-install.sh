@@ -1,1 +1,2 @@
-mv /etc/logrotate.d/rsyslog /etc/logrotate.d.rsyslog.bak
+echo "Pre-Install"
+dpkg-divert --package oc-sd-optimizations --divert /etc/logrotate.d.rsyslog.old --rename /etc/logrotate.d/rsyslog

@@ -1,4 +1,7 @@
-mv /etc/logrotate.d.rsyslog.bak /etc/logrotate.d/rsyslog
+echo "Post-Uninstall"
+
+dpkg-divert --package oc-sd-optimizations --rename --remove /etc/logrotate.d/rsyslog
+
 systemctl restart cron.service
 systemctl restart systemd-journald.service
 
