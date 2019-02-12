@@ -1,4 +1,4 @@
-dpkg-divert --package oc-sd-optimizations --remove --rename /etc/logrotate.d/rsyslog
+mv /etc/logrotate.d.rsyslog.bak /etc/logrotate.d/rsyslog
 systemctl restart cron.service
 systemctl restart systemd-journald.service
 

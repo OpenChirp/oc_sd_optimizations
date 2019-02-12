@@ -1,1 +1,1 @@
-dpkg-divert --package oc-sd-optimizations --add --rename /etc/logrotate.d/rsyslog
+mv /etc/logrotate.d/rsyslog /etc/logrotate.d.rsyslog.bak
