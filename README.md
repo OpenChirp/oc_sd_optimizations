@@ -18,6 +18,8 @@ curl -s https://api.github.com/repos/OpenChirp/oc_sd_optimizations/releases/late
 
 sudo dpkg -i oc-sd-optimizations*.deb
 rm oc-sd-optimizations_*.deb
+
+sudo reboot
 ```
 
 
